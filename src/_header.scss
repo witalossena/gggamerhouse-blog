@@ -1,32 +1,48 @@
 header {
-    width: 100%;
-    box-shadow: 0 6px 6px -5px black;
-    position: fixed;;
-  
-    .navbar {
-      background-color: $LIGHT;
+  width: 100%;
+  box-shadow: 0 6px 6px -5px black;
+  position: relative;
+  .form-inline{
+    .form-control{
+      width: 200px;
+      height: auto;
+    }
+
+  }
+  .navbar-brand{
+    margin: 0 0 0 0;
+  }
+  .navbar {
+    background-color: $LIGHT;
+    padding: 0 1rem;
+    @media (min-width: 360px) and (max-width: 1024px) {
+      display: flex;
+      justify-content: space-between;
+      padding: 1rem;
+    }
+    .navbar-nav {
+      padding: 0 4rem;
       @media (min-width: 360px) and (max-width: 1024px) {
-        display: flex;
-        justify-content: space-between;
-  
+        padding: 0;
       }
-      // .navbar-brand {
-      // }
-      .navbar-nav {
-        padding: 0.5rem 4rem;
-        @media (min-width: 360px) and (max-width: 1024px) {
-          padding: 0;
+      .nav-item {
+        margin: 0 1rem;
+        height: 100%;
+        padding: 0.5rem;
+        &:hover{
+          box-shadow: inset 0px -3px 0px 0px rgba(0,0,0,0.75);
+          transition: box-shadow .2s;
         }
-        .nav-item {
-          margin: 0 1rem;
-          .nav-link {
-            color: $DARK; 
-            opacity: 0.6;
-            &:hover {
-              opacity: 1;
-            }
+        .nav-link {
+          color: $DARK;
+          opacity: 0.6;
+          &:hover {
+            opacity: 1;
+
+          
           }
         }
       }
     }
   }
+}

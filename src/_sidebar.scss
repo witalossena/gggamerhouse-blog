@@ -1,0 +1,21 @@
+.sidebar {
+    height: 430px;
+    width: 100%;
+    background-color: $DARK;
+    box-shadow: 1px 1px 4px 1px rgba(0,0,0,0.75);
+    color: #FFF;
+    .sidebar-title {
+        text-align: center;
+        padding: 1rem;
+
+    }
+    ul {
+      padding: 2rem 1rem;
+      text-align: left;
+      li {
+        margin: 0 0 1rem;
+        padding: 0 0 0 1rem;
+        font-size: 1rem;
+      }
+    }
+  }

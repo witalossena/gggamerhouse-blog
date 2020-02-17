@@ -17901,6 +17901,37 @@ __webpack_require__(/*! popper.js */ "./node_modules/popper.js/dist/esm/popper.j
 
 __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
 
+var screenSize = screen.width;
+
+if (screenSize < "792") {
+  var fluid = document.getElementById("masterhead");
+  fluid.classList.remove("container");
+  fluid.classList.add("container-fluid");
+} else {
+  var _fluid = document.getElementById("masterhead");
+
+  _fluid.classList.remove("container-fluid");
+
+  _fluid.classList.add("container");
+}
+
+window.onscroll = function () {
+  myFunction();
+}; // Get the navbar
+
+
+var navbar = document.getElementById("navbar"); // Get the offset position of the navbar
+
+var sticky = navbar.offsetTop; // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky");
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+
 /***/ }),
 
 /***/ "./src/app.scss":
@@ -17921,8 +17952,8 @@ __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\witalo.sena\Desktop\gggamerhouse\src\app.js */"./src/app.js");
-module.exports = __webpack_require__(/*! C:\Users\witalo.sena\Desktop\gggamerhouse\src\app.scss */"./src/app.scss");
+__webpack_require__(/*! C:\Users\witalo\Desktop\gggamerhouse\src\app.js */"./src/app.js");
+module.exports = __webpack_require__(/*! C:\Users\witalo\Desktop\gggamerhouse\src\app.scss */"./src/app.scss");
 
 
 /***/ })

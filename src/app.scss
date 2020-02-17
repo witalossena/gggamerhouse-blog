@@ -4,24 +4,69 @@
 @import "color";
 @import "footer";
 @import "header";
+@import "sidebar";
+@import "masterhead";
 
 body {
   font-family: "Roboto", sans-serif;
   font-size: 18px;
+  @media (min-width: 360px) and (max-width: 1024px) {
+    font-size: 14px;
+  }
+  background-color: $LIGHT_DARK;
 }
 
 a {
   transition: 0.3s;
+  &:hover {
+    opacity: 0.8;
+    text-decoration: none;
+    transition: 0.3s;
+  }
 }
 
-
-.masterhead{ 
-  background: url(../assets/images/bg-materhead.jpg) center top;
-  height: 450px;
+.heading-1,
+.heading-2 {
+  color: $LIGHT;
+  text-transform: capitalize;
 }
 
-section{
+.heading-1 {
+  @media (min-width: 360px) and (max-width: 1024px) {
+    font-size: 1em;
+  }
+  font-size: 2em;
+}
+
+.heading-2 {
+  font-size: 1em;
+}
+
+.height-1 {
+  height: 475px;
+}
+
+.height-2 {
+  height: 200px;
+}
+
+.pad-top-8{
+  padding-top: 8rem;
+}
+
+section {
   position: relative;
-  min-height: 100vh;
-  padding: 6rem 2rem;
+  min-height: auto;
+  padding-bottom: 2rem;
+  @media (min-width: 360px) and (max-width: 1024px) {
+    padding: 1rem 0;
+  }
 }
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 15;
+}
+
