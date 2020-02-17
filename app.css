@@ -10351,11 +10351,12 @@ a {
 }
 
 .masterhead {
-  margin-top: 25rem;
-  background: url(../assets/images/bg-materhead.jpg);
+  background: url(../assets/images/bg-materhead.jpg) center top;
+  height: 450px;
 }
 
 section {
+  position: relative;
   min-height: 100vh;
-  padding: 2rem 2rem;
+  padding: 6rem 2rem;
 }
