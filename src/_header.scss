@@ -1,0 +1,32 @@
+header {
+    width: 100%;
+    box-shadow: 0 6px 6px -5px black;
+    position: fixed;
+  
+    .navbar {
+      background-color: $LIGHT;
+      @media (min-width: 360px) and (max-width: 1024px) {
+        display: flex;
+        justify-content: space-between;
+  
+      }
+      // .navbar-brand {
+      // }
+      .navbar-nav {
+        padding: 0.5rem 4rem;
+        @media (min-width: 360px) and (max-width: 1024px) {
+          padding: 0;
+        }
+        .nav-item {
+          margin: 0 1rem;
+          .nav-link {
+            color: $DARK; 
+            opacity: 0.6;
+            &:hover {
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+  }
