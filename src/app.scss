@@ -6,6 +6,7 @@
 @import "header";
 @import "sidebar";
 @import "masterhead";
+@import "iframe";
 
 body {
   font-family: "Roboto", sans-serif;
@@ -24,11 +25,17 @@ a {
     transition: 0.3s;
   }
 }
+h1,
+h2,
+h3,
+h4 {
+  text-transform: capitalize;
+  color: $light;
+}
 
 .heading-1,
 .heading-2 {
   color: $light;
-  text-transform: capitalize;
 }
 
 .heading-1 {
@@ -49,28 +56,51 @@ a {
   }
 }
 
-.height-2 {
-  height: 200px;  
-}
-
-.pad-top-8{
-  padding-top: 8rem;
-}
-
-.text-opacity{
-  opacity: 0.8;
-}
-
-
-.btn-nav{
-  background-color: white;
-  &:hover{
-    opacity: 0.8;
-    transition: opacity box-shadow .4s;
-    box-shadow: 0px 0px 5px -1px rgba(0,0,0,0.26);
+.section-title {
+  margin: 2rem 0;
+  @media (min-width: 360px) and (max-width: 1024px) {  
+    margin: 0;
+    padding: 3rem 0 1rem;
+ 
+  }  
+  .title-heading {
+    @media (min-width: 360px) and (max-width: 1024px) {
+      text-align: left;
+      font-size: 1.6rem;
+      width: 100%; 
+    }
+    color: $light;
+    text-transform: capitalize;
   }
 }
 
+.height-2 {
+  height: 200px;
+}
+
+.pad-top-8 {
+  padding-top: 8rem;
+}
+
+.pad-bottom-8 {
+  padding-bottom: 8rem;
+  @media (min-width: 360px) and (max-width: 1024px) {
+    padding-bottom: 1rem;
+  }
+}
+
+.text-opacity {
+  opacity: 0.8;
+}
+
+.btn-nav {
+  background-color: white;
+  &:hover {
+    opacity: 0.8;
+    transition: opacity box-shadow 0.4s;
+    box-shadow: 0px 0px 5px -1px rgba(0, 0, 0, 0.26);
+  }
+}
 
 section {
   position: relative;
@@ -87,3 +117,80 @@ section {
   z-index: 15;
 }
 
+.posts {
+  padding: 0 0 1rem 0;
+  margin: 0 0 1rem;
+  display: flex;
+  @media (min-width: 360px) and (max-width: 1024px) {
+    padding: 0;
+    margin: 0;
+    flex-direction: column;
+  }
+  .image-container {
+    width: 30%;
+    @media (min-width: 360px) and (max-width: 1024px) {
+      width: 100%;
+      margin: 0 0 1rem 0;
+    }
+    .image-wrapper {
+      position: relative;
+      width: 100%;
+      height: 200px;
+      opacity: 0.7;
+      &::after{
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 1;
+        background: rgb(0, 0, 0);
+        background: rgba(0, 0, 0, 0.3);
+        opacity: 0;
+
+      }
+
+      &:hover::after{
+        opacity: 1;
+        transition: ease-in opacity .2s;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  .text-wrapper {
+    width: 70%;
+    padding: 0 0 0 1rem;
+    @media (min-width: 360px) and (max-width: 1024px) {
+      width: 100%;
+      padding: 0 0 1rem;
+    }
+  }
+}
+
+.section-border {
+  border-bottom: solid 1px gray;
+}
+
+.pagination {
+  padding-top: 1rem;
+  display: flex;
+  justify-content: center;
+  .page-item {
+    opacity: 0.7;
+    .page-link {
+      background-color: $dark;
+      color: $light;
+      border-color: gray;
+      &:hover {
+        color: $red;
+        transition: ease-in-out color 0.2s;
+        border-color: $light;
+      }
+    }
+  }
+}

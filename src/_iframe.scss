@@ -1,0 +1,8 @@
+iframe{
+    height: 475px;
+    box-shadow: -11px 10px 0px 0px rgba(100,65,164,1);
+    @media (min-width: 360px) and (max-width: 1024px) {
+        height: 200px;
+      }      
+    width: 100%;
+}

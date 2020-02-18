@@ -10482,10 +10482,10 @@ header .navbar .navbar-nav .nav-item .nav-link:hover {
     margin-bottom: 1rem;
   }
 }
-.masterhead:hover::after {
+.masterhead::after {
   position: absolute;
   background: black;
-  background: rgba(0, 0, 0, 0.1);
+  background: rgba(0, 0, 0, 0.3);
   top: 0;
   bottom: 0;
   left: 0;
@@ -10494,7 +10494,11 @@ header .navbar .navbar-nav .nav-item .nav-link:hover {
   width: 100%;
   height: 100%;
   content: "";
-  transition: background 0.2s;
+  opacity: 0;
+}
+.masterhead:hover::after {
+  opacity: 1;
+  transition: ease-in opacity 0.2s;
 }
 .masterhead img {
   width: 100%;
@@ -10511,6 +10515,7 @@ header .navbar .navbar-nav .nav-item .nav-link:hover {
   align-content: center;
   background: black;
   background: rgba(0, 0, 0, 0.5);
+  z-index: 18;
 }
 @media (min-width: 360px) and (max-width: 1024px) {
   .masterhead .header-title {
@@ -10525,7 +10530,7 @@ header .navbar .navbar-nav .nav-item .nav-link:hover {
   border-radius: 0px 0px 20px 0px;
   font-size: 0.8rem;
   background-color: #222831;
-  z-index: 10;
+  z-index: 99;
 }
 @media (min-width: 360px) and (max-width: 1024px) {
   .masterhead .header-tag {
@@ -10544,9 +10549,30 @@ header .navbar .navbar-nav .nav-item .nav-link:hover {
 .border-shadow {
   box-shadow: 12px 10px 0px 0px #f91d1c;
 }
+@media (min-width: 360px) and (max-width: 1024px) {
+  .border-shadow {
+    box-shadow: 2px 5px 0px 0px #f91d1c;
+  }
+}
 
 .border-shadow2 {
   box-shadow: -12px -10px 0px 0px #1b0d0d;
+}
+@media (min-width: 360px) and (max-width: 1024px) {
+  .border-shadow2 {
+    box-shadow: 0 0 0 0 #1b0d0d;
+  }
+}
+
+iframe {
+  height: 475px;
+  box-shadow: -11px 10px 0px 0px #6441a4;
+  width: 100%;
+}
+@media (min-width: 360px) and (max-width: 1024px) {
+  iframe {
+    height: 200px;
+  }
 }
 
 body {
@@ -10569,10 +10595,17 @@ a:hover {
   transition: 0.3s;
 }
 
+h1,
+h2,
+h3,
+h4 {
+  text-transform: capitalize;
+  color: #F4F4F4;
+}
+
 .heading-1,
 .heading-2 {
   color: #F4F4F4;
-  text-transform: capitalize;
 }
 
 .heading-1 {
@@ -10597,12 +10630,42 @@ a:hover {
   }
 }
 
+.section-title {
+  margin: 2rem 0;
+}
+@media (min-width: 360px) and (max-width: 1024px) {
+  .section-title {
+    margin: 0;
+    padding: 3rem 0 1rem;
+  }
+}
+.section-title .title-heading {
+  color: #F4F4F4;
+  text-transform: capitalize;
+}
+@media (min-width: 360px) and (max-width: 1024px) {
+  .section-title .title-heading {
+    text-align: left;
+    font-size: 1.6rem;
+    width: 100%;
+  }
+}
+
 .height-2 {
   height: 200px;
 }
 
 .pad-top-8 {
   padding-top: 8rem;
+}
+
+.pad-bottom-8 {
+  padding-bottom: 8rem;
+}
+@media (min-width: 360px) and (max-width: 1024px) {
+  .pad-bottom-8 {
+    padding-bottom: 1rem;
+  }
 }
 
 .text-opacity {
@@ -10634,4 +10697,86 @@ section {
   top: 0;
   width: 100%;
   z-index: 15;
+}
+
+.posts {
+  padding: 0 0 1rem 0;
+  margin: 0 0 1rem;
+  display: flex;
+}
+@media (min-width: 360px) and (max-width: 1024px) {
+  .posts {
+    padding: 0;
+    margin: 0;
+    flex-direction: column;
+  }
+}
+.posts .image-container {
+  width: 30%;
+}
+@media (min-width: 360px) and (max-width: 1024px) {
+  .posts .image-container {
+    width: 100%;
+    margin: 0 0 1rem 0;
+  }
+}
+.posts .image-container .image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  opacity: 0.7;
+}
+.posts .image-container .image-wrapper::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  background: black;
+  background: rgba(0, 0, 0, 0.3);
+  opacity: 0;
+}
+.posts .image-container .image-wrapper:hover::after {
+  opacity: 1;
+  transition: ease-in opacity 0.2s;
+}
+.posts .image-container .image-wrapper img {
+  width: 100%;
+  height: 100%;
+}
+.posts .text-wrapper {
+  width: 70%;
+  padding: 0 0 0 1rem;
+}
+@media (min-width: 360px) and (max-width: 1024px) {
+  .posts .text-wrapper {
+    width: 100%;
+    padding: 0 0 1rem;
+  }
+}
+
+.section-border {
+  border-bottom: solid 1px gray;
+}
+
+.pagination {
+  padding-top: 1rem;
+  display: flex;
+  justify-content: center;
+}
+.pagination .page-item {
+  opacity: 0.7;
+}
+.pagination .page-item .page-link {
+  background-color: #343a40;
+  color: #F4F4F4;
+  border-color: gray;
+}
+.pagination .page-item .page-link:hover {
+  color: #F91D1C;
+  transition: ease-in-out color 0.2s;
+  border-color: #F4F4F4;
 }
