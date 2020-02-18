@@ -17952,8 +17952,8 @@ function myFunction() {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\witalo\Desktop\gggamerhouse\src\app.js */"./src/app.js");
-module.exports = __webpack_require__(/*! C:\Users\witalo\Desktop\gggamerhouse\src\app.scss */"./src/app.scss");
+__webpack_require__(/*! C:\Users\witalo.sena\Desktop\gggamerhouse\src\app.js */"./src/app.js");
+module.exports = __webpack_require__(/*! C:\Users\witalo.sena\Desktop\gggamerhouse\src\app.scss */"./src/app.scss");
 
 
 /***/ })

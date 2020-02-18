@@ -10309,8 +10309,62 @@ h3 {
   }
 }
 footer {
+  position: relative;
   background-color: #eeeeee;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0;
+}
+footer .container {
+  display: flex;
+}
+footer .container .col-wrapper {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+footer .container .col-wrapper .footer-logo {
+  width: 115px;
   height: 80px;
+}
+footer .container .col-wrapper .footer-logo img {
+  width: 100%;
+  height: 100%;
+}
+footer .container .navbar {
+  padding: 0 0 0 18%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+footer .container .navbar .navbar-brand {
+  color: #222831;
+}
+footer .container .navbar .navbar-nav .nav-link {
+  color: #222831;
+  opacity: 0.6;
+}
+footer .container .navbar .navbar-nav .nav-link:hover {
+  opacity: 1;
+}
+footer .container .navbar-social {
+  margin-top: 1rem;
+  display: flex;
+}
+footer .container .navbar-social .icon {
+  margin: 0 1rem;
+}
+footer .container .navbar-social .icon i {
+  font-size: 2rem;
+}
+
+.footer-p {
+  font-size: 0.9rem;
+  color: #222831;
 }
 
 header {
@@ -10324,6 +10378,12 @@ header .form-inline .form-control {
 }
 header .navbar-brand {
   margin: 0 0 0 0;
+  width: 80px;
+  height: 60px;
+}
+header .navbar-brand img {
+  width: 100%;
+  height: 100%;
 }
 header .navbar {
   background-color: #eeeeee;
@@ -10500,6 +10560,10 @@ a:hover {
 
 .pad-top-8 {
   padding-top: 8rem;
+}
+
+.text-opacity {
+  opacity: 0.8;
 }
 
 section {
