@@ -10650,9 +10650,19 @@ h4 {
 .height-2 {
   height: 200px;
 }
+@media (min-width: 360px) and (max-width: 1024px) {
+  .height-2 {
+    height: 250px;
+  }
+}
 
 .pad-top-8 {
   padding-top: 8rem;
+}
+@media (min-width: 360px) and (max-width: 1024px) {
+  .pad-top-8 {
+    padding-bottom: 1rem;
+  }
 }
 
 .pad-bottom-8 {
