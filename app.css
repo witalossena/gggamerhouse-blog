@@ -10449,9 +10449,14 @@ header .navbar .navbar-nav .nav-item .nav-link:hover {
   box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.75);
   color: #FFF;
 }
+@media (min-width: 360px) and (max-width: 1024px) {
+  .sidebar {
+    height: 320px;
+  }
+}
 .sidebar .sidebar-title {
-  text-align: center;
-  padding: 1rem;
+  text-align: left;
+  padding: 1rem 0 0 2rem;
   text-transform: capitalize;
 }
 .sidebar .sidebar-title h1 {
