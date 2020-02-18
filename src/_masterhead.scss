@@ -57,7 +57,7 @@
         font-size: 0.8rem;
       }
       background-color: $DARK;
-      z-index: 99;
+      z-index: 80;
       &:hover {
         background: $LIGHT_DARK;
         transition: 0.2s background;
@@ -69,14 +69,14 @@
   } 
 
   .border-shadow{
-    box-shadow: 12px 10px 0px 0px rgba(249,29,28,1);
+    box-shadow: 8px 5px 0px 0px rgba(249,29,28,1);
     @media (min-width: 360px) and (max-width: 1024px) {
       box-shadow: 2px 5px 0px 0px rgba(249,29,28,1);   
     }
   }
   
   .border-shadow2{
-    box-shadow: -12px -10px 0px 0px rgba(27,13,13,1);
+    box-shadow: -8px -5px 0px 0px rgba(27,13,13,1);
     @media (min-width: 360px) and (max-width: 1024px) {
       box-shadow: 0 0 0 0 rgba(27,13,13,1);
     }
