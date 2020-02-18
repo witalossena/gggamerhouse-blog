@@ -5,15 +5,7 @@ header {
   .form-inline{
     .form-control{
       width: 200px;
-      height: auto;
-      &:active{
-        border: cadetblue;
-        box-shadow: crimson;
-
-      }      
-      &:hover{
-        
-      }
+      height: auto;    
     }
   }
   .navbar-brand{
