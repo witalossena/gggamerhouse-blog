@@ -1,14 +1,23 @@
 footer {
   position: relative;
-  background-color: $LIGHT;
+  background-color: $light;
   height: auto;
   display: flex;
   justify-content: center;
   padding: 2rem 0;
+  @media (min-width: 360px) and (max-width: 1024px) {
+    flex-direction: column;
+  }
   .container {
     display: flex;
+    @media (min-width: 360px) and (max-width: 1024px) {
+      flex-direction: column;
+    }
     .col-wrapper {
-      width: 50%;
+      @media (min-width: 360px) and (max-width: 1024px) {
+        width: 100%;
+      }
+      width: 40%;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -21,10 +30,14 @@ footer {
         }
       }
     }
-
     .navbar {
       padding: 0 0 0 18%;
-      width: 50%;
+      width: 60%;
+      @media (min-width: 360px) and (max-width: 1024px) {
+        width: 100%;
+        padding: 0 0 0 0;
+
+      }      
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -39,8 +52,7 @@ footer {
           &:hover{
             opacity: 1;
           }
-        }
-      
+        }      
       }
     }
     .navbar-social {

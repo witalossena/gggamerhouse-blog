@@ -1,13 +1,20 @@
 header {
   width: 100%;
-  box-shadow: 0 6px 6px -5px black;
+  box-shadow: 0 6px 6px -5px  rgba(27,13,13,1);
   position: relative;
   .form-inline{
     .form-control{
       width: 200px;
       height: auto;
-    }
+      &:active{
+        border: cadetblue;
+        box-shadow: crimson;
 
+      }      
+      &:hover{
+        
+      }
+    }
   }
   .navbar-brand{
     margin: 0 0 0 0;
@@ -19,7 +26,7 @@ header {
     }
   }
   .navbar {
-    background-color: $LIGHT;
+    background-color: $light;
     padding: 0 1rem;
     @media (min-width: 360px) and (max-width: 1024px) {
       display: flex;
@@ -36,16 +43,14 @@ header {
         height: 100%;
         padding: 0.5rem;
         &:hover{
-          box-shadow: inset 0px -3px 0px 0px rgba(0,0,0,0.75);
+          box-shadow: inset 0px -3px 0px 0px rgba(249,29,28,1);
           transition: box-shadow .2s;
         }
         .nav-link {
           color: $DARK;
           opacity: 0.6;
           &:hover {
-            opacity: 1;
-
-          
+            opacity: 1;          
           }
         }
       }

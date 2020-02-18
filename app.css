@@ -10310,20 +10310,35 @@ h3 {
 }
 footer {
   position: relative;
-  background-color: #eeeeee;
+  background-color: #F4F4F4;
   height: auto;
   display: flex;
   justify-content: center;
   padding: 2rem 0;
 }
+@media (min-width: 360px) and (max-width: 1024px) {
+  footer {
+    flex-direction: column;
+  }
+}
 footer .container {
   display: flex;
 }
+@media (min-width: 360px) and (max-width: 1024px) {
+  footer .container {
+    flex-direction: column;
+  }
+}
 footer .container .col-wrapper {
-  width: 50%;
+  width: 40%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+@media (min-width: 360px) and (max-width: 1024px) {
+  footer .container .col-wrapper {
+    width: 100%;
+  }
 }
 footer .container .col-wrapper .footer-logo {
   width: 115px;
@@ -10335,11 +10350,17 @@ footer .container .col-wrapper .footer-logo img {
 }
 footer .container .navbar {
   padding: 0 0 0 18%;
-  width: 50%;
+  width: 60%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+}
+@media (min-width: 360px) and (max-width: 1024px) {
+  footer .container .navbar {
+    width: 100%;
+    padding: 0 0 0 0;
+  }
 }
 footer .container .navbar .navbar-brand {
   color: #222831;
@@ -10369,12 +10390,16 @@ footer .container .navbar-social .icon i {
 
 header {
   width: 100%;
-  box-shadow: 0 6px 6px -5px black;
+  box-shadow: 0 6px 6px -5px #1b0d0d;
   position: relative;
 }
 header .form-inline .form-control {
   width: 200px;
   height: auto;
+}
+header .form-inline .form-control:active {
+  border: cadetblue;
+  box-shadow: crimson;
 }
 header .navbar-brand {
   margin: 0 0 0 0;
@@ -10386,7 +10411,7 @@ header .navbar-brand img {
   height: 100%;
 }
 header .navbar {
-  background-color: #eeeeee;
+  background-color: #F4F4F4;
   padding: 0 1rem;
 }
 @media (min-width: 360px) and (max-width: 1024px) {
@@ -10410,7 +10435,7 @@ header .navbar .navbar-nav .nav-item {
   padding: 0.5rem;
 }
 header .navbar .navbar-nav .nav-item:hover {
-  box-shadow: inset 0px -3px 0px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: inset 0px -3px 0px 0px #f91d1c;
   transition: box-shadow 0.2s;
 }
 header .navbar .navbar-nav .nav-item .nav-link {
@@ -10431,6 +10456,10 @@ header .navbar .navbar-nav .nav-item .nav-link:hover {
 .sidebar .sidebar-title {
   text-align: center;
   padding: 1rem;
+  text-transform: capitalize;
+}
+.sidebar .sidebar-title h1 {
+  font-weight: 300;
 }
 .sidebar ul {
   padding: 2rem 1rem;
@@ -10440,6 +10469,7 @@ header .navbar .navbar-nav .nav-item .nav-link:hover {
   margin: 0 0 1rem;
   padding: 0 0 0 1rem;
   font-size: 1rem;
+  font-style: italic;
 }
 
 .masterhead {
@@ -10508,7 +10538,15 @@ header .navbar .navbar-nav .nav-item .nav-link:hover {
   transition: 0.2s background;
 }
 .masterhead .header-tag .tag {
-  color: #00adb5;
+  color: #F91D1C;
+}
+
+.border-shadow {
+  box-shadow: 12px 10px 0px 0px #f91d1c;
+}
+
+.border-shadow2 {
+  box-shadow: -12px -10px 0px 0px #1b0d0d;
 }
 
 body {
@@ -10533,7 +10571,7 @@ a:hover {
 
 .heading-1,
 .heading-2 {
-  color: #eeeeee;
+  color: #F4F4F4;
   text-transform: capitalize;
 }
 
@@ -10553,6 +10591,11 @@ a:hover {
 .height-1 {
   height: 475px;
 }
+@media (min-width: 360px) and (max-width: 1024px) {
+  .height-1 {
+    height: 300px;
+  }
+}
 
 .height-2 {
   height: 200px;
@@ -10564,6 +10607,15 @@ a:hover {
 
 .text-opacity {
   opacity: 0.8;
+}
+
+.btn-nav {
+  background-color: white;
+}
+.btn-nav:hover {
+  opacity: 0.8;
+  transition: opacity box-shadow 0.4s;
+  box-shadow: 0px 0px 5px -1px rgba(0, 0, 0, 0.26);
 }
 
 section {

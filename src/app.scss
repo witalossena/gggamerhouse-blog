@@ -27,7 +27,7 @@ a {
 
 .heading-1,
 .heading-2 {
-  color: $LIGHT;
+  color: $light;
   text-transform: capitalize;
 }
 
@@ -44,10 +44,13 @@ a {
 
 .height-1 {
   height: 475px;
+  @media (min-width: 360px) and (max-width: 1024px) {
+    height: 300px;
+  }
 }
 
 .height-2 {
-  height: 200px;
+  height: 200px;  
 }
 
 .pad-top-8{
@@ -57,6 +60,18 @@ a {
 .text-opacity{
   opacity: 0.8;
 }
+
+
+.btn-nav{
+  background-color: white;
+  &:hover{
+    opacity: 0.8;
+    transition: opacity box-shadow .4s;
+    box-shadow: 0px 0px 5px -1px rgba(0,0,0,0.26);
+  }
+}
+
+
 section {
   position: relative;
   min-height: auto;
@@ -65,7 +80,6 @@ section {
     padding: 1rem 0;
   }
 }
-
 .sticky {
   position: fixed;
   top: 0;
